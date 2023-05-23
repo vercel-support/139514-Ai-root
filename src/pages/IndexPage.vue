@@ -1,13 +1,7 @@
 <template>
   <q-page class="column items-center justify-evenly splash" padding>
     <router-link to="/chat">
-      <q-img
-      src="src/pages/view.png"
-      class="q-mr-sm"
-      width="70px"
-      height="70px"
-      alt="My Icon"
-    />
+      <q-icon name="chat" size="lg"  />
     </router-link>
   </q-page>
 </template>
