@@ -1,0 +1,19 @@
+// app global css in SCSS form
+
+.q-message-text--received {
+    background: rgb(26, 44, 60) !important;
+    /*background:rgb(102, 218, 255);*/
+    border-radius: 4px 4px 4px 0;
+    
+}
+.q-message-text--received:last-child:before {
+    right: 100%;
+    border-right: 0 solid transparent;
+    border-left: 8px solid transparent;
+    border-bottom: 8px solid rgb(26, 44, 60);
+    /*border-bottom: 8px solid rgb(102, 218, 255);*/
+}
+.q-message-text-content--received{
+	/*color:#000*/
+	color: #fff;
+}
