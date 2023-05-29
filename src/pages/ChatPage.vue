@@ -91,7 +91,7 @@ const sendMessage = async (inputData: string) => {
     stamp: dayjs().toISOString(),
     });
     }
-    const response = await axios.post<Message>('http://127.0.0.1:5000/chat', {
+    const response = await axios.post<Message>('/LeckyAPI.py', {
       message:inputData,
     });
     const chatResponse = response.data;
