@@ -29,14 +29,14 @@ qa = RetrievalQA.from_chain_type(
     retriever=docsearch.as_retriever()
 )
 
-@app.route('/query', methods=['POST'])
+@app.route('/api/query', methods=['POST'])
 def query():
     data = request.get_json()
     q = data['query']
     answer = qa.run(q)
     return jsonify({'query': q, 'answer': answer})
 
-@app.route('/soundQuery', methods=['POST'])
+@app.route('/api/soundQuery', methods=['POST'])
 def sound_query():
     data = request.get_json()
     q = data['query']
@@ -46,5 +46,3 @@ def sound_query():
     playsound('answer.mp3')
     return jsonify({'query': q, 'answer': answer})
 
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)
