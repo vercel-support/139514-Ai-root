@@ -91,7 +91,7 @@ const sendMessage = async (inputData: string) => {
     stamp: dayjs().toISOString(),
     });
     }
-    const response = await axios.post<Message>('api/index.py', {
+    const response = await axios.post<Message>('https://autogpt-rosy.vercel.app', {
       message:inputData,
     });
     const chatResponse = response.data;
