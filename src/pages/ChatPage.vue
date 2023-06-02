@@ -91,7 +91,7 @@ const sendMessage = async (inputData: string) => {
     stamp: dayjs().toISOString(),
     });
     }
-    const response = await axios.post<Message>('api/query', {
+    const response = await axios.post<Message>('api.py', {
       message:inputData,
     });
     const chatResponse = response.data;
