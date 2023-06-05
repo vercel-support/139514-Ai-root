@@ -12,7 +12,7 @@ from gtts import gTTS
 
 app = Flask(__name__)
 
-os.environ["OPENAI_API_KEY"] = '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'
+os.environ["OPENAI_API_KEY"] = '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'
 
 text_speech = pyttsx3.init()
 embeddings = OpenAIEmbeddings(openai_api_key=os.getenv("OPENAI_API_KEY"))
@@ -46,3 +46,5 @@ def sound_query():
     playsound('answer.mp3')
     return jsonify({'query': q, 'answer': answer})
 
+if __name__ == '__main__':
+    app.run(debug=True)
