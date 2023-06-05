@@ -3,3 +3,4 @@ pyttsx3==2.90
 playsound==1.2.2
 gTTS==2.2.2
 langchain==0.0.184
+pipenv==2021.5.29
