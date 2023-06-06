@@ -12,7 +12,7 @@ from gtts import gTTS
 
 app = Flask(__name__)
 
-os.environ["OPENAI_API_KEY"] = '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'
+os.environ["OPENAI_API_KEY"] = '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'
 
 text_speech = pyttsx3.init()
 embeddings = OpenAIEmbeddings(openai_api_key=os.getenv("OPENAI_API_KEY"))
@@ -29,7 +29,7 @@ qa = RetrievalQA.from_chain_type(
     retriever=docsearch.as_retriever()
 )
 
-@app.route('/api/query', methods=['POST'])
+@app.route('/api/index.py', methods=['POST'])
 def query():
     data = request.get_json()
     q = data['query']
